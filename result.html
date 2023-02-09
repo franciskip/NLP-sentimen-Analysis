@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Yego NLP App
+		</div>
+		<h2>Sentiment Detector for Airline tweets</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 'negative'%}
+	<h2 style="color:red;">The Sentiment is Negative</h2>
+	{% elif prediction == 'neutral'%}
+	<h2 style="color:blue;">The Sentiment is Neutral</h2>
+	{% elif prediction == 'positive'%}
+	<h2 style="color:blue;">The Sentiment is Positive</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
